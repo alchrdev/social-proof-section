@@ -1,0 +1,118 @@
+:root {
+  --fz-base: 0.9375rem;
+  --ff: 'League Spartan', sans-serif;
+  --clr-primary-very-dark-magenta: hsl(300, 43%, 22%);
+  --clr-primary-very-soft-pink: hsl(333, 80%, 67%);
+  --clr-neutral-dark-grayish-magenta: hsl(303, 10%, 53%);
+  --clr-neutral-light-grayish-magenta: hsl(300, 24%, 96%);
+  --clr-neutral-white: hsl(0, 0%, 100%);
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff);
+  font-size: var(--fz-base);
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+p {
+  margin-block: 0;
+}
+
+.container {
+  max-width: 90rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  padding-block-end: 2rem;
+}
+
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem;
+}
+
+.review__card__img {
+  block-size: 2.6rem;
+  border-radius: 50%;
+}
+
+.review__card__grid {
+  background-color: var(--clr-primary-very-dark-magenta);
+  border-radius: 0.6875rem;
+  color: var(--clr-neutral-white);
+  padding-inline: 1.875rem;
+  padding-block-start: 2.75rem;
+  padding-block-end: 2.1875rem;
+}
+
+.review__card__user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-block-end: 2rem;
+}
+
+.review__card__quote {
+  margin-inline: 0;
+  margin-block: 0;
+  line-height: 1.1875rem;
+  font-size: 1rem;
+}
+
+.review__card__user__info {
+  font-size: 1rem;
+}
+
+.review__card__user__info__name {
+  font-weight: var(--fw-medium);
+  margin-block-end: 0.25rem;
+}
+
+.review__card__user__info__status {
+  color: var(--clr-primary-very-soft-pink);
+}
+
+
+@media (min-width: 48em){
+  .container {
+    padding-inline: 8.4375rem;
+  }
+
+  .reviews {
+    flex-direction: row;
+    gap: 1.4375rem;
+  }
+
+  .review__card__grid {
+    padding-inline: 1.775rem;  
+  }
+
+  .review__card:nth-of-type(2) {
+    transform: translateY(1.25rem);
+  }
+
+  .review__card:nth-of-type(3) {
+    transform: translateY(2.5rem);
+  }
+}
